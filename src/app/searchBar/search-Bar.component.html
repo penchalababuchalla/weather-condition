@@ -1,0 +1,39 @@
+
+<div class="row">
+	<div class="col-5" *ngIf="this.weatherData">
+		name:{{this.weatherData.timezone}}<br>
+		<img src="https://img.icons8.com/fluency/48/000000/weather.png" class="imgWidth2" /><br>
+		Temp:{{this.weatherData.current.temp}}
+	</div>
+	<div class="col-7 ">
+		<div class="row">
+			latitude:<input type="text" name="lat" [(ngModel)]="lat" class="inptwidth">
+		</div>
+		<div class="row">
+			longitude:<input type="text" name="lon" [(ngModel)]="lon" class="inptwidth">
+		</div>
+		<div class="row">
+			<button (click)="checkWeather()" class="radius">search</button>
+		</div>
+		<div class="row" *ngIf="this.weatherData">
+			<div class="col-6 ">
+				<img src="https://img.icons8.com/color/48/000000/pressure.png"class="imgWidth"/><br>	
+				Pressure:{{this.weatherData.current.pressure}}
+			</div>
+			<div class="col-6">
+				<img src="https://img.icons8.com/fluency/48/000000/dew-point.png" class="imgWidth" /><br>
+				Humidity:{{this.weatherData.current.humidity}}
+			</div>
+		</div>
+		<div class="row" *ngIf="this.weatherData">
+			<div class="col-6">
+				<img src="https://img.icons8.com/clouds/100/000000/wind.png"/><br>
+				Wind speed:{{this.weatherData.current.wind_speed}}
+			</div>
+			<div class="col-6">
+				<img src="https://img.icons8.com/clouds/100/000000/sunrise.png"/><br>
+				Wind speed:{{this.weatherData.current.sunrise}}
+			</div>
+		</div>
+	</div>
+</div>

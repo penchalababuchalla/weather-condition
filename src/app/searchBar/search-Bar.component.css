@@ -1,0 +1,16 @@
+
+.border{
+	border: 1px solid;
+}
+.imgWidth{
+	width: 100px;
+}
+.imgWidth2{
+	width: 200px;
+}
+.inptwidth{
+	height: 20px;
+}
+.radius{
+	border-radius:50px;
+}
